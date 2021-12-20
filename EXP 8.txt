@@ -1,0 +1,121 @@
+package cslab;
+abstract class Animal
+{
+int legs;
+String name;
+Animal(int legs)
+{
+this.legs = legs;
+}
+void walk() 
+{
+System.out.println("This animal walks on "+(legs)+(" legs."));
+}
+void eat() 
+{
+System.out.println("");
+}}
+
+	interface pet
+	{
+	  public String getName();
+	  public void setName(String Name);
+	  public void play();
+	}
+	class Spider extends Animal
+	{
+		Spider(int legs)
+		{
+		  super(legs);
+		}
+		void eat()
+		{
+		System.out.println("Spider eats insects.");
+		}
+	}
+	class Cat extends Animal implements pet
+	{
+		Cat (int legs, String name)
+		{
+		   super(legs);
+		   this.name = name;
+		}
+		public String getName()
+		{
+			return name;
+		}
+		public void setName(String name)
+		{
+		  this.name=name;
+		}
+		public void play()
+		{
+			System.out.println("Cat likes to play with a ball.");
+		}
+		void eat()
+		{
+			System.out.println("Cat eats fishes.");
+		}
+		void walk() 
+		{
+		System.out.println("Cat has 4 legs.");
+		}
+	}
+	class Fish extends Animal implements pet
+	{
+		Fish(int legs,String name) 
+		{
+		super(legs);
+		this.name = name;
+		}
+		public String getName() {
+		return name;
+		}
+		public void setName(String name) {
+		this.name = name;
+		}
+		public void play() {
+		System.out.println("Fish likes to swim around.");
+		}
+		void eat() {
+		System.out.println("Fish eats plants.");
+		}
+		void walk() 
+		{
+		System.out.println("Fish has no legs.");
+		}
+	
+    }
+
+public class AnimalExp8
+ {
+	public static void main(String[] args)
+	{
+	
+		//Fish
+		System.out.println("Fish");
+		Fish F = new Fish(0,"Mimi");
+		System.out.println("This fish's name is "+F.getName());
+		F.eat();
+		F.walk();
+		F.setName("Momo");
+		System.out.println("This fish's name is "+F.getName()+"\n");
+		//Cat
+		System.out.println("Cat");
+		Cat C = new Cat(4,"Fluffy");
+		System.out.println("This cat's name is "+C.getName());
+		C.walk();
+		C.eat();
+		C.setName("Moose");
+		System.out.println("This Cat's name is "+C.getName()+"\n");
+		//Spider
+		System.out.println("Spider");
+		Spider S = new Spider(8);
+		S.eat();
+		S.walk();
+		
+	}
+  }
+
+
+
