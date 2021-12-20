@@ -1,0 +1,36 @@
+package cslab;
+import java.util.*;
+public class Exp9
+{
+	public static void main(String[] args)
+	{
+		int num1,num2,Result;
+		String in;
+		do 
+		{
+	    try 
+		  {
+	    	Scanner sc = new Scanner(System.in);
+	    	System.out.println("Enter The Number-1 : ");
+	    	num1 = sc.nextInt();
+	    	System.out.println("Enter The Number-2 : ");
+	    	num2 =sc.nextInt();
+
+	    	Result=num1/num2;
+	    	System.out.println("Result =  "+Result);
+		  }
+	    catch(Exception e )
+	      {
+	    	 System.out.println("/By Zero");
+	      } 
+	    finally 
+	     {
+	    	Scanner ob = new Scanner(System.in);
+	    	System.out.println("End Of Operation... ");
+	    	System.out.println("Do You Want To Continue, Y or N : ");
+	    	in=ob.next();
+	      }
+	    }
+		while(in.equalsIgnoreCase("y")); 
+	}
+}
